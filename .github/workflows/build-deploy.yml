@@ -8,9 +8,9 @@ jobs:
       - uses: actions/checkout@v2
       - run: mvn -v
       - run: java -version
-      - run: rm -rf ~/.m2/repository
+      - run: mvn dependency:purge-local-repository -DreResolve=false
       - run: cd ${{ github.workspace }}
       - run: set username=sangnv96
       - run: set password=Momdad12111993@
-      - run: mvn clean install -DskipTests -Du=${username} -Dp=${password}
+      - run: mvn clean package -Du=${username} -Dp=${password}
       - run: mvn deploy
