@@ -8,7 +8,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: mvn -v
       - run: java -version
-      - run: rm ~/.m2
+      - run: mvn clean install -U
       - run: cd ${{ github.workspace }}
       - run: set username=sangnv96
       - run: set password=Momdad12111993@
