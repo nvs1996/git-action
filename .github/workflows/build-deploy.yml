@@ -12,4 +12,4 @@ jobs:
       - run: mvn package
       - run: mvn deploy
       - name: Build and Deploy
-        uses: actions/build-deploy@v2
+        uses: actions/checkout@v2
