@@ -9,7 +9,8 @@ jobs:
       - run: java -version
       - run: ls ${{ github.workspace }}
       - run: cd ${{ github.workspace }}
-      - run: ls -l
+      - working-directory: ${{ github.workspace }}
+      - run: ls -la
       - run: mvn package
       - run: mvn deploy
       - name: Build and Deploy
