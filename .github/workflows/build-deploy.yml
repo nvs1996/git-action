@@ -7,9 +7,9 @@ jobs:
     steps:
       - run: mvn -v
       - run: java -version
-      - run: ls -l
       - run: cd ${{ github.workspace }}
+      - run: ls -l
       - run: mvn package
       - run: mvn deploy
-      - name: Standard Checkout
-        uses: actions/checkout@v2
+      - name: Build and Deploy
+        uses: actions/build-deploy@v2
