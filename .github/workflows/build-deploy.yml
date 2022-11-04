@@ -7,6 +7,7 @@ jobs:
     steps:
       - run: mvn -v
       - run: java -version
+      - run: ls ${{ github.workspace }}
       - run: cd ${{ github.workspace }}
       - run: ls -l
       - run: mvn package
