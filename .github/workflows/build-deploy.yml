@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: mvn -v
-      - run: jdk -v
+      - run: java -version
       - run: mvn package
       - run: mvn deploy
       - name: Standard Checkout
