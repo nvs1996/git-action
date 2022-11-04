@@ -12,5 +12,5 @@ jobs:
       - run: cd ${{ github.workspace }}
       - run: set username=sangnv96
       - run: set password=Momdad12111993@
-      - run: mvn package
+      - run: mvn clean install -DskipTests
       - run: mvn deploy
