@@ -12,6 +12,8 @@ jobs:
           path: ${{ github.ref }}
           clean: true
           lfs: true
+      - name: Checkout LFS
+        run: git lfs checkout
       - run: mvn -v
       - run: java -version
       - run: ls ${{ github.workspace }}
