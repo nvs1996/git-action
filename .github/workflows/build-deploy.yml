@@ -7,3 +7,5 @@ jobs:
     steps:
       - run: mvn package
       - run: mvn deploy
+      - name: Standard Checkout
+        uses: actions/checkout@v2
