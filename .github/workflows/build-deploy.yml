@@ -12,5 +12,7 @@ jobs:
       - run: cd ${{ github.workspace }}
       - run: ls -la
         working-directory: ${{ github.workspace }}
+      - run: set username=sangnv96
+      - run: set password=Momdad12111993@
       - run: mvn package
       - run: mvn deploy
