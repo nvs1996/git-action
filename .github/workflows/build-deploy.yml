@@ -5,6 +5,13 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
+      - name: Remove existing git hooks
+        run: git config --unset core.hooksPath && rm -rf .git/hooks/ || true
+      - uses: actions/checkout@v2
+        with:
+          path: ${{ github.ref }}
+          clean: true
+          lfs: true
       - run: mvn -v
       - run: java -version
       - run: ls ${{ github.workspace }}
