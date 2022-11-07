@@ -6,6 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: sudo apt install nodejs
+      - run: npm install -g anypoint-cli-v4
+      - run: node -v
       - run: mvn -v
       - run: java -version
       - run: mvn dependency:purge-local-repository -DreResolve=false
